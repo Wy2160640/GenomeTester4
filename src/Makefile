@@ -54,6 +54,18 @@ LISTCOMPARE_SOURCES = \
 	queue.c queue.h \
 	utils.c
 
+GDISTRIBUTION_SOURCES = \
+	gdistribution.c \
+	wordtable.c \
+	wordmap.c \
+	fasta.c \
+	buffer.c \
+	sequence.c \
+	sequence-file.c sequence-file.h \
+	common.c \
+	queue.c queue.h \
+	utils.c
+
 GMER_COUNTER_SOURCES = \
 	gmer_counter.c \
 	index.c index.h \
@@ -133,6 +145,9 @@ glistquery: $(LISTQUERY_SOURCES)
 
 glistcompare: $(LISTCOMPARE_SOURCES)
 	$(CXX) $(LISTCOMPARE_SOURCES) -o glistcompare $(LIBS) $(CXXFLAGS)
+
+gdistribution: $(GDISTRIBUTION_SOURCES)
+	$(CXX) $(GDISTRIBUTION_SOURCES) -o gdistribution $(LIBS) $(CXXFLAGS)
 
 gmer_counter: $(GMER_COUNTER_SOURCES)
 	$(CXX) $(GMER_COUNTER_SOURCES) -o gmer_counter $(LIBS) $(CXXFLAGS) -Wall
